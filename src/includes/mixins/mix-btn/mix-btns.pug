@@ -1,0 +1,16 @@
+mixin btn(attr)
+    if(attr.type === 'link')
+        a(
+            href= attr.btnUrl,
+            id= attr.id ? attr.id : false,
+            class="btn" + (attr.className ? ' ' + attr.className : '')
+            class= attr.disabled ? 'disabled' : false
+        )= attr.label
+    else
+        button(
+            id= attr.id ? attr.id : false,
+            class="btn" + (attr.className ? ' ' + attr.className : ''),
+            type= attr.type ? attr.type : false,
+            name= attr.fieldName ? attr.fieldName : false,
+            disabled= attr.disabled ? '' : false
+        )= attr.label

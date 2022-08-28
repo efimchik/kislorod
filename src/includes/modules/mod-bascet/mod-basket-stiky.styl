@@ -1,0 +1,53 @@
+.basket-stiky
+    padding 24px 24px 33px
+    background-color #F8FAFB
+    box-sizing border-box
+
+    @media(min-width 768px)
+        margin-top 0
+        padding 62px 48px 44px
+
+    @media(min-width 650px)
+        padding 30px 50px 35px
+
+    &__header
+        margin-top 20px
+
+        @media(min-width 650px)
+            margin-top 30px
+            display flex
+            align-items center
+            justify-content space-between
+
+    .field
+        &__box
+            margin-bottom 10px
+            height 36px
+
+            @media(min-width 768px)
+                width calc(100% - 120px)
+
+            @media(min-width 650px)
+                margin 0
+                width calc(100% - 188px)
+
+        &__text
+            padding 0 14px
+
+    .label
+        line-height 15px
+        font-size 13px
+
+    h3
+        margin-bottom 24px
+
+        @media(min-width 768px)
+            margin-bottom 42px
+
+    .btn
+        @media(min-width 768px)
+            width 100px
+
+        @media(min-width 650px)
+            width 148px
+            flex-shrink 0

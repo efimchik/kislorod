@@ -1,0 +1,15 @@
+include ./data
+
++orderBox('Адрес доставки', 'js-addres__box')
+
+    .field__box
+        +inputText(inputStreet)
+
+    .field__box.small
+        +inputText(inputBuilding)
+
+    .field__box.small
+        +inputText(inputFlet)
+
+    .field__box.small.js-postcode
+        +inputText(inputPostcode)

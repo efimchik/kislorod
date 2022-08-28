@@ -1,0 +1,24 @@
+.products-list.active
+    each item in productsList
+        .products-list__item
+            button(type="button").products-list__close
+            .products-list__item-img
+                +setImg(item.imgData)
+            .products-list__item-info
+                .products-list__item-header
+                    .products-list__item-title
+                        a(href= item.produrnLink)= item.title
+
+                    each info in item.infoProduct
+                        .products-list__item-line
+                            .products-list__item-label= info.label
+                            .products-list__item-value= info.value
+
+                .products-list__item-price
+                    .products-list__item-price-new
+                        span.products-list__item-price-value= item.price.priceNew
+                        span= item.price.priceLabel
+                    .products-list__item-price-old
+                        span.products-list__item-price-value= item.price.priceOld
+                        span= item.price.priceLabel
+                include ./../mod-counter/mod-counter

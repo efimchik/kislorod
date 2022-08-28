@@ -1,0 +1,10 @@
+mixin textarea(params)
+    textarea(
+        id= params.id ,
+        class="field__textarea" + (params.className ? ' ' + params.className : ''),
+        name= params.fieldName,
+        value= params.value,
+        placeholder= params.placeholder,
+        disabled= params.disabled
+        required= params.required
+    )

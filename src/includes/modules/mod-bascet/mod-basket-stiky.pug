@@ -1,0 +1,13 @@
+include ./data
+
+.basket-stiky
+    h3 Ваша корзина
+
+    .basket-stiky__header
+        .field__box
+            +inputText(inputPromoCode)
+        +btn(btnApplyPromoCode)
+
+    include ./mod-basket-stiky-list
+
+    include ./mod-basket-stiky-footer

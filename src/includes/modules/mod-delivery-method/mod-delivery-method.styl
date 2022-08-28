@@ -1,0 +1,58 @@
+.method-item
+    margin-top -4px
+    padding 16px
+    width 100%
+    min-height 74px
+    height auto
+    display flex
+    flex-direction column
+    justify-content center
+    background #fff
+    border 2px solid #DDE3E8;
+    border-radius 3px
+    box-sizing border-box
+    cursor pointer
+    transition box-shadow 300ms, border 300ms
+
+    @media(min-width 920px)
+        max-width 460px
+
+    &:first-child
+        margin-top 0
+
+    &.active
+        border-color #71B6EF
+
+    &:hover
+        box-shadow 0px 0px 15px 0 rgba(#0077E2, 0.1)
+
+    &__line
+        width 100%
+        display flex
+        justify-content space-between
+
+        &:last-child
+            margin-top 9px
+            line-height 13px
+            font-size 11px
+            color #788995
+
+            @media(min-width 650px)
+                line-height 16px
+                font-size 13px
+
+    &__title
+        line-height 17px
+        font-size 14px
+
+        @media(min-width 650px)
+            line-height 19px
+            font-size 16px
+
+    &__price
+        line-height 16px
+        font-size 13px
+
+        @media(min-width 650px)
+            line-height 18px
+            font-size 15px

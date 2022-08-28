@@ -1,0 +1,12 @@
+include ./data
+
++orderBox('Выбранный пункт самовывоза', 'js-point__box')
+    .export-point
+        .export-point__address Чебоксары, Тракторостроителей пр-кт, д. 9
+        .export-point__label Можно забрать в понедельник, 10 февраля
+        .export-point__work
+            .export-point__work-label Режим работы:
+            .export-point__work-value Ежедневно 9:00-20:00
+        .export-point__line
+            +btn(btnMore)
+            +btn(chooseAnother)

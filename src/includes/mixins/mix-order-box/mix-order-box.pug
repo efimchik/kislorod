@@ -1,0 +1,11 @@
+mixin orderBox(title, className, buttonTitle)
+    div(class="order-box" + (className ? ' ' + className : ''))
+        .order-box__header
+            h4= title
+
+            if(buttonTitle)
+                .order-box__button
+                    span.underline Юридическое лицо
+        .order-box__content
+            if(block)
+                block

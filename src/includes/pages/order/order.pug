@@ -1,0 +1,24 @@
+include ./data
+
+.order-page.js-individual-order
+    .center
+        .title
+            h1 Оформление заказа
+        form.js-form(action="" novalidate)
+            .order-page__columns
+                .order-page__column
+                    include ./../../modules/mod-get-city/mod-get-city
+                    include ./../../modules/mod-recipient-data/mod-recipient-data
+                    include ./../../modules/mod-delivery-method/mod-delivery-method
+                    include ./../../modules/mod-delivery-address/mod-delivery-address
+                    include ./../../modules/mod-export/mod-export
+                    include ./../../modules/mod-payment/mod-payment
+                    include ./../../modules/mod-comment/mod-comment
+
+                .order-page__column
+                    include ./../../modules/mod-bascet/mod-basket-stiky
+
+                include ./../../modules/mod-products/mod-products
+            .order-page__bottom
+                +checkbox(agreementBox)
+                +btn(btnCheckout)

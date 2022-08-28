@@ -1,0 +1,35 @@
+include ./data
+
++orderBox('Данные получателя', 'order-box__recipient', 'Юридическое лицо')
+        .field__container
+            .field__box.js-individual
+                +inputText(inputName)
+            span.field__info
+                |Полные фамилия, имя и отчество могут потребоваться при получении заказа
+
+        .field__box.middle.js-law
+            +inputText(inputInn)
+
+        .field__box.js-law
+            +inputText(inputCompany)
+
+        .field__box.js-law
+            +inputText(inputPerson)
+
+        .field__box.middle
+            +inputText(inputEmail)
+
+        .field__container.middle
+            .field__box
+                +inputText(inputPhone)
+            span.field__info
+                |Для согласования времени доставки
+
+        .field__box.js-law
+            +inputText(inputAddress)
+
+        .field__box.middle.js-law
+            +inputText(inputCpp)
+
+        .field__box.middle.js-law
+            +inputText(inputOgrn)

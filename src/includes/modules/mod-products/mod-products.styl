@@ -1,0 +1,35 @@
+.products
+    margin-top 40px
+    width 100%
+    order 1
+
+    @media(min-width 920px)
+        max-width 754px
+
+    &__header
+        margin-bottom 30px
+        display flex
+        align-items center
+        justify-content space-between
+
+        .underline
+            margin-right 28px
+            line-height 16px
+            font-size 13px
+            color #0077E2
+
+            &.active
+                &:after
+                    margin-top -6px
+                    transform rotate(45deg)
+
+            &:after
+                content ''
+                width 8px
+                height 8px
+                position absolute
+                top 50%
+                right -28px
+                border-bottom 2px solid #0077E2
+                border-right 2px solid #0077E2
+                transform rotate(-135deg)

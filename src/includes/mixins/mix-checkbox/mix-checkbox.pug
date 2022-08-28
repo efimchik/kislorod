@@ -1,0 +1,15 @@
+mixin checkbox(params)
+    .field__checkbox-box
+        input(
+            type="checkbox"
+            id= params.id
+            class="field__checkbox" + (params.className ? ' ' + params.className : '')
+            name= params.name ? params.name : false
+            required= params.required ? params.required : false
+            disabled= params.disabled ? params.disabled : false
+            checked= params.checked ? '' : false
+        )
+        label.field__checkbox-label(for= params.id)
+            != params.label
+            if(params.link)
+                a(href= params.link)= params.linkTitle

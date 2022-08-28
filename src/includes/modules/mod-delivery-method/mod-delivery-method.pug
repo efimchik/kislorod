@@ -1,0 +1,12 @@
+include ./data
+
++orderBox('Способ доставки')
+    each item in deliveryMethod
+        div(class="method-item" + (item.subClass ? ' ' + item.subClass : ''))
+            .method-item__line
+                .method-item__title= item.title
+                .method-item__price
+                    span.method-item__price-value.js-price-val= item.price
+            .method-item__line
+                .method-item__desc= item.desc
+                .method-item__date= item.date

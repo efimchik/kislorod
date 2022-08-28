@@ -1,0 +1,15 @@
+
+.basket-stiky__list.scroll-inside
+    each item in basketStikyList
+        .basket-stiky__list-item
+            .basket-stiky__list-img
+                +setImg(item.imgList)
+            .basket-stiky__list-info
+                .basket-stiky__list-title
+                    h4= item.title
+                .basket-stiky__list-price
+                    span.basket-stiky__list-price-value.js-price-val= item.price
+                    if(item.label)
+                        span.basket-stiky__list-price-label= item.label
+                    else
+                        span.basket-stiky__list-price-label руб.

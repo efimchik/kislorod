@@ -1,0 +1,95 @@
+.order-page
+    padding 53px 0 80px
+    box-sizing border-box
+
+    @media(min-width 920px)
+        padding 100px 0 145px
+
+    @media(min-width 650px)
+        padding 60px 0 130px
+
+    &__columns
+        display flex
+        flex-direction column
+
+        @media(min-width 920px)
+            width 100%
+            flex-direction row
+            flex-wrap wrap
+            justify-content space-between
+
+    &__column
+        margin-top 60px
+        order 2
+
+        @media(min-width 1100px)
+            width 40%
+
+        @media(min-width 920px)
+            margin-top 0
+            width 48%
+            order 1
+
+        &:first-child
+            margin-top 0
+            order 0
+
+            @media(min-width 1100px)
+                width 48.5217391%
+
+            @media(min-width 920px)
+                width 48.5217391%
+
+    &__bottom
+        margin-top 40px
+
+        @media(min-width 920px)
+            margin-top 30px
+
+        @media(min-width 650px)
+            margin-top 60px
+
+        .btn
+            margin-top 30px
+            height 48px
+
+            @media(min-width 920px)
+                margin-top 80px
+                width 250px
+
+            @media(min-width 650px)
+                width 100%
+
+            @media(min-width 650px)
+                margin-top 40px
+                height 54px
+
+    .js-point__box
+        display none
+
+    &.courier
+        .js-postcode
+            display none
+
+    &.point
+        .js-point__box
+            display block
+
+        .js-addres__box
+            display none
+
+    &.js-individual-order
+        .js-law
+            display none
+
+    &.js-law-order
+        .js-law
+            display block
+
+        .js-individual
+        .field__info
+            display none
+
+        .order-box__recipient
+            .order-box__content
+                margin-top -30px

@@ -1,0 +1,54 @@
+.order-box
+    margin-top 30px
+
+    @media(min-width 650px)
+        margin-top 50px
+
+    &__header
+        margin-bottom 18px
+        width 100%
+        display flex
+        align-items center
+        justify-content space-between
+
+        @media(min-width 650px)
+            margin-bottom 30px
+
+    &__button
+        line-height 16px
+        font-size 13px
+        color #0077E2
+        position relative
+
+    &__content
+        display flex
+        flex-wrap wrap
+        align-items flex-start
+        gap 18px 30px
+
+        @media(min-width 650px)
+            gap 24px 30px
+
+        .field
+            &__container
+                width 100%
+
+                .field__box
+                    margin-top 0
+
+                &:first-child
+                    margin-top 0
+
+            &__box
+                width 100%
+
+                &:first-child
+                    margin-top 0
+
+        .middle
+            @media(min-width 650px)
+                width calc(50% - 15px)
+
+        .small
+            @media(min-width 650px)
+                width calc((100% - 60px) / 3)

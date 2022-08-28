@@ -1,0 +1,13 @@
+mixin radio(params)
+    each param in params
+        .field__radio-box
+            input(
+                type= param.type
+                id= param.id
+                class="field__radio" + (param.className ? ' ' + param.className : '')
+                name= param.name ? param.name : false
+                value= param.value ? param.value : false
+                disabled= param.disabled ? param.disabled : false
+                checked= param.checked ? '' : false
+            )
+            label.field__radio-label(for= param.id)!= param.label

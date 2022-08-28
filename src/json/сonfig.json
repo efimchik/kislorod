@@ -1,0 +1,27 @@
+{
+    "global": {
+        "lang": "ru",
+        "title": "Страница PUG",
+        "styles": [
+            "https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css",
+            "./css/main.min.css"
+        ],
+        "headScripts": [
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        ],
+        "scripts": [
+            "https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js",
+            "./js/simplebar.min.js",
+            "./js/main.min.js"
+        ],
+
+        "fonts": [
+            "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+        ]
+    },
+    "main": {
+        "title": "Главная страница",
+        "description": "Описание главной страницы",
+        "menuIndex": 0
+    }
+}

@@ -1,0 +1,7 @@
+mixin setImg(data)
+    picture
+        img(
+            src="./img/" + data.first,
+            srcset="./img/" + data.second,
+            alt= data.alt
+        )

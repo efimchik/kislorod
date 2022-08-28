@@ -1,0 +1,12 @@
+.basket-stiky__footer
+    each item in basketStikyFooter
+        .basket-stiky__footer-item
+            .basket-stiky__footer-label= item.label
+            .basket-stiky__footer-value
+                span(
+                    class="basket-stiky__footer-result" + (
+                        item.value.subClass ? ' ' + item.value.subClass : ''
+                    )
+                )= item.value.result
+                if(item.value.label)
+                    span.basket-stiky__footer-result-label= item.value.label

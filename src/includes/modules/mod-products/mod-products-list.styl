@@ -3,7 +3,9 @@
         max-height 0
         overflow hidden
         box-sizing border-box
-        transition max-height 600ms
+
+        @media(min-width 920px)
+            transition max-height 600ms
 
         &__item
             margin-top -2px
@@ -112,7 +114,9 @@
             right 18px
             border 0
             cursor pointer
-            transition opacity 300ms
+
+            @media(min-width 920px)
+                transition opacity 300ms
 
             &:before
             &:after
@@ -131,4 +135,5 @@
                 transform rotate(-45deg)
 
             &:hover
-                opacity 0.5
+                @media(min-width 920px)
+                    opacity 0.5

@@ -12,10 +12,10 @@
     border-radius 3px
     box-sizing border-box
     cursor pointer
-    transition box-shadow 300ms, border 300ms
 
     @media(min-width 920px)
         max-width 460px
+        transition box-shadow 300ms, border 300ms
 
     &:first-child
         margin-top 0
@@ -24,7 +24,8 @@
         border-color #71B6EF
 
     &:hover
-        box-shadow 0px 0px 15px 0 rgba(#0077E2, 0.1)
+        @media(min-width 920px)
+            box-shadow 0px 0px 15px 0 rgba(#0077E2, 0.1)
 
     &__line
         width 100%

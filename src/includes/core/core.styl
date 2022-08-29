@@ -79,11 +79,13 @@ a
     color #0077E2
 
     &:hover
-        text-decoration none
+        @media(min-width 920px)
+            text-decoration none
 
 img
     width 100%
     display block
+    user-select none
 
 h1
     line-height 29px
@@ -154,6 +156,7 @@ h4
 .underline
     position relative
     cursor pointer
+    user-select none
 
     &:before
         content ''

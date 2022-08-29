@@ -20,7 +20,9 @@
         background-color #F8FAFB
         border 0
         cursor pointer
-        transition opacity 300ms
+
+        @media(min-width 920px)
+            transition opacity 300ms
 
         &:before
         &:after
@@ -44,7 +46,8 @@
                 display none
 
         &:hover
-            opacity 0.5
+            @media(min-width 920px)
+                opacity 0.5
 
 
     input[type="text"]

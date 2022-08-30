@@ -120,15 +120,25 @@
     &-track
         z-index 1
         position absolute
-        right -10px
+        right 0
         bottom 0
-        pointer-events none
+        cursor grabbing
 
         &.simplebar
             &-vertical
                 top 18px
-                width 1px
-                background-color #D4D9DD
+                width 5px
+                background none
+                // background-color #D4D9DD
+
+                &:before
+                    content ''
+                    width 1px
+                    position absolute
+                    top 0
+                    bottom 0
+                    left 50%
+                    background-color #D4D9DD
 
                 .simplebar-scrollbar
                     &:before
@@ -155,8 +165,8 @@
 
     &-scrollbar
         position absolute
-        left -2px
-        right -2px
+        left 0
+        right 0
         min-height 10px
 
         &:before

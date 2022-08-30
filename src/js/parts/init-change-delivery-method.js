@@ -23,6 +23,9 @@ if(document.querySelectorAll('.method-item')) {
         return result  = result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
 
+    //clear fields
+    let pointFieldsClear = document.querySelectorAll('.js-point');
+    let courierField = document.querySelector('.js-courier-field');
 
     // set default delivery value
     deliveryBasket.innerText = defaultDeliveryPrice.innerText;
@@ -42,9 +45,18 @@ if(document.querySelectorAll('.method-item')) {
                 if(this.classList.contains('js-courier')) {
                     parentBlock.classList.remove('point');
                     parentBlock.classList.add('courier');
+
+                    courierField.classList.remove('error');
+                    courierField.value = '';
+
                 } else if(this.classList.contains('js-point')) {
                     parentBlock.classList.remove('courier');
                     parentBlock.classList.add('point');
+
+                    pointFieldsClear.forEach(input => {
+                        input.classList.remove('error');
+                        input.value = '';
+                    })
                 } else {
                     parentBlock.classList.remove('courier');
                     parentBlock.classList.remove('point');

@@ -9,7 +9,7 @@
 
         &__item
             margin-top -2px
-            padding 12px 48px 12px 12px
+            padding 12px 48px 16px 12px
             display flex
             position relative
             background #fff
@@ -18,7 +18,7 @@
             box-sizing border-box
 
             @media(min-width 650px)
-                padding 18px 48px 18px 18px
+                padding 18px 92px 18px 18px
 
             &:first-child
                 margin-top 0
@@ -28,9 +28,11 @@
                 display flex
                 flex-direction column
 
+                @media(min-width 920px)
+                    align-items center
+
                 @media(min-width 650px)
                     flex-direction row
-                    align-items center
                     justify-content space-between
 
             &-img
@@ -47,7 +49,7 @@
                 width 100%
 
                 @media(min-width 650px)
-                    margin-right 15px
+                    margin-right 18px
 
             &-title
                 margin-bottom 8px
@@ -81,8 +83,11 @@
                 line-height 24px
                 font-size 14px
 
+                @media(min-width 920px)
+                    margin 0 40px 0 0
+
                 @media(min-width 650px)
-                    margin 0 15px 0 0
+                    margin 12px 40px 0 0
 
                 &-value
                     margin-right 4px
@@ -107,33 +112,42 @@
                         background-color #788995
 
         &__close
-            width 12px
-            height 12px
+            width 24px
+            height 24px
             position absolute
-            top 18px
-            right 18px
+            top 12px
+            right 12px
             border 0
             cursor pointer
 
             @media(min-width 920px)
+                top 50%
+                transform translateY(-50%)
                 transition opacity 300ms
+
+            @media(min-width 650px)
+                top 24px
+                right 24px
 
             &:before
             &:after
                 content ''
-                width 100%
+                width 12px
                 height 2px
                 position absolute
                 top 50%
-                left 0
+                left 50%
                 background-color #000
 
             &:before
-                transform rotate(45deg)
+                transform translate(-50%, -50%) rotate(45deg)
 
             &:after
-                transform rotate(-45deg)
+                transform translate(-50%, -50%) rotate(-45deg)
 
             &:hover
                 @media(min-width 920px)
                     opacity 0.5
+
+        &.active
+            max-height 550px

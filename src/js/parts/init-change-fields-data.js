@@ -2,31 +2,18 @@ if(document.querySelector('.order-box__recipient')) {
     let btnRecipient = document.querySelector('.order-box__recipient .underline');
     let parentBlock = document.querySelector('.order-page');
 
-    let formInputsGeneral = document.querySelectorAll('.js-field-general');
-    let formInputsLaw = document.querySelectorAll('.js-field-law');
-    let formInputsAddress = document.querySelectorAll('.js-field-address');
-    let formInputsName = document.querySelector('.js-field-name');
-    let formInputsPostcode = document.querySelector('.js-field-postcode');
 
 
     function clearErrorsFields(fieldList) {
-
         fieldList.forEach(function (input) {
-            input.classList.remove('error');
             input.value = '';
+            input.classList.remove('error');
         });
     }
 
     btnRecipient.addEventListener('click', () => {
-        clearErrorsFields(formInputsGeneral);
-        clearErrorsFields(formInputsLaw);
-        clearErrorsFields(formInputsAddress);
-
-        formInputsName.classList.remove('error');
-        formInputsName.value = '';
-
-        formInputsPostcode.classList.remove('error');
-        formInputsPostcode.value = '';
+        let formInputsText = document.querySelectorAll('.field__text');
+        clearErrorsFields(formInputsText);
 
 
         if(parentBlock.classList.contains('js-individual-order')) {

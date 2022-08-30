@@ -12,11 +12,17 @@
         align-items center
         justify-content space-between
 
+        @media(min-width 650px)
+            justify-content flex-start
+
         .underline
             margin-right 28px
             line-height 16px
             font-size 13px
             color #0077E2
+
+            @media(min-width 650px)
+                margin 0 28px 0 40px
 
             &.active
                 &:after

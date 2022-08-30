@@ -6,7 +6,8 @@
                 +setImg(item.imgList)
             .basket-stiky__list-info
                 .basket-stiky__list-title
-                    h4= item.title
+                    h4
+                        a(href="##")= item.title
                 .basket-stiky__list-price
                     span.basket-stiky__list-price-value.js-price-val= item.price
                     if(item.label)
